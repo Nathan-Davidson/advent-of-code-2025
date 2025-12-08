@@ -24,21 +24,6 @@ def main():
                     diagram[r][c + 1] = '|'
     
     print(len(splits))
-
-def solve(problem: list[list[str]]) -> int:
-    op = problem[-1].strip()
-    numbers = ['' for _ in problem[0]]
-    for row in problem[:-1]:
-        for i, c in enumerate(row):
-            numbers[i] += c.strip()
-    numbers = [int(num) for num in numbers]
-    total = numbers[0]
-    for num in numbers[1:]:
-        if op == '*':
-            total *= num
-        else:
-            total += num
-    return total
-
+    
 if __name__ == '__main__':
     main()
